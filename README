@@ -1,0 +1,46 @@
+#===========================================#
+# oct 2023
+# Romuald Laso-Jadart - MNHN - EPHE
+# Elise GAY - MNHN - EPHE
+# Run SNIF
+# please inform the authors before sharing
+#===========================================#
+
+# Aim : 
+#------#
+Run SNIF for demographic inference 
+Demographic inferences made by assuming that the individuals came from a structured population and compare the results to the PSMC plot
+
+# Input :
+#----------#
+PSMC output
+
+# Methods :
+#----------#
+This pipeline here is made to provide usable script to run SNIF on the cluster
+Adatped for PSL cluster with SLURM command
+
+How to run the script on the cluster : 
+Fill the parameter in the python script "snif.py"
+sbatch run_snif.sh
+
+Remarks :
+For each given component and distance, the program will test different parameters n,M,t etc. and decide for which parameter the demographic inference best matches the output of PSMC
+According to the author the graphics have to be analyzed manually to select the best inference from SNIF.
+
+# output :
+#----------#
+
+Files :
+    .curve.csv :
+	d_omega / d_visuel
+	inf.n = nb of infered DEME
+	inf.t = Time of the mutation rate changes.
+	inf.M = Migration rate for each 'c'
+	inf.S = DEME size
+	inf.N.Ref = Sum of all individu (?)
+
+    .csv :
+	Times = Times (multiply per 'g')
+	sources = Ne from PSMC
+	infered = Infered Ne
