@@ -8,13 +8,14 @@
 
 # Aim : 
 #------#
-Run SNIF for demographic inference 
+Run SNIF tool for demographic inference : https://github.com/arredondos/snif
+SNIF is published here: Inferring number of populations and changes in connectivity under the n-island model, Armando Arredondo, et al 2021
 Demographic inferences made by assuming that the individuals came from a structured population and compare the results to the PSMC plot
 
 # Input :
 #----------#
 PSMC output
-
+SNIF folder : https://github.com/arredondos/snif
 # Methods :
 #----------#
 This pipeline here is made to provide usable script to run SNIF on the cluster
